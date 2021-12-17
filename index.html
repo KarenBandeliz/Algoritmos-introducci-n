@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Ejercicio 1</h1> 
+<h2>Ejercicio 1</h2> 
+//*On pen and paper, solve the logical exercises and give the expected output statement (true / false):*// 
 ( true && true ) 
 ( false && true ) 
 ( true && false ) 
@@ -22,4 +23,146 @@
 ( !true && true )
 ( !false || false )
 </body>
+
+<h2>Ejercicio 2</h2>
+*//Create a function that takes in one number 
+and checks if the number is greater than 10. Print out to the console true if it is greater and false otherwise.*//
+
+function numero(a){
+if (a > 10){
+alert(true);//alert muestra la ventana con el resultado
+    }else{
+    alert(false);
+    }
+}
+
+let num = parseInt(prompt("Ingrese un número: ")) /*prompt muestra la ventana con la pregunta y regresa una cadena de texto, 
+parseInt cambia la cadena a tipo número*/
+numero(num);
+
+<h2>Ejercicio 3</h2>
+//*Create a function that takes in one number and checks if it is divisible by 4 or divisible by 9. Print out to the console true if a number if divisible by 4 or 9, and false if a number is not divisible by either number.*//
+function numero2(a){
+    if(a % 4 == 0 || a % 9 == 0){
+    console.log(true);
+    }else{console.log(false)}
+}
+numero2(4);
+
+<h2>Ejercicio 4</h2>
+//*We want to check if a string is empty. If a string is not empty, we want to print out the first character of that string. If a string is empty, print out a text saying "This string is empty"*//
+
+
+let cadena = prompt("Introduce la cadena");
+
+function checkEmptyString(cadena) {
+if (cadena == ""){
+    console.log("Esta cadena esta vacía");
+}else{
+    console.log(cadena.substr(0,1));
+}
+}
+checkEmptyString(cadena);
+
+<h2>Ejercicio 5</h2>
+*//We want to compare two strings and check if they are the same - case insensitive. Return a boolean - true if the two strings are the same, and false if they are not*//
+
+let str1 = (prompt("Introduce a word"));
+let str2 = (prompt("Introduce a word"));
+
+function checkTwoStringsSame(str1, str2) {
+    if (str1.toLowerCase() === str2.toLowerCase()){
+        alert(true);
+    }else {
+        alert(false);
+    }
+}
+
+checkTwoStringsSame(str1, str2);
+
+<h2>Ejercicio 6</h2>
+Create a function that takes in 2 inputs (using prompt) and goes through the 5 arithmetic operators (+, -, /, *, %). The expected output on the console is: `The sum is x` -> x is the calculated sum `The subtraction is y` -> y is the calculated difference The multiplication is z` -> z is the calculated multiplication `The division is w` -> w is the calculated division `The remainder is q` -> q is the calculated remainder*//
+
+var numero1 = (prompt("Introduce a word"));
+var numero2 = (prompt("Introduce a word"));
+var Numero = (numero1+numero2);
+
+function calculadora(numero1,numero2){
+    return("La suma de los valores es: " + Numero + " \nLa resta de los valores es: "+ (numero1-numero2) + " \nLa multiplicacion de los valores es: "+ numero1*numero2 + " \nLa división de los valores es: "+ numero1/numero2 + " \nEl modulo de la división de los valores es: "+ (numero1%numero2));
+}
+
+console.log(calculadora(numero1,numero2)) 
+
+<h2>Ejercicio 7</h2>
+//*1.	Open a repl.it Javascript page and call it Algorithms Introduction Exercise 1.
+2.	Write a program where a user enters the number of tasks they have completed. The program returns one of the following labels to the console:
+based on the conditions:
+•	Failed if they scored 6 or less
+•	Insufficient if they scored > 6 but less than 9 (9 included)
+•	Good if they scored > 9 but less than 14 (14 included)
+•	Excellent if they scored 15
+•	Error if participants enter a negative number or a number outside the range supported (outside 0 - 15)*//
+
+let number1 = parseInt(prompt("Ingrese cantidad de tareas"));
+
+    if(number1 > 0 && number1<=6){
+    
+    alert("Fallo");
+
+}else if(number1 > 6 && number1 <=9){
+alert("Insuficiente");
+
+}else if(number1 > 9 && number1 <=14){
+
+alert("Bueno");
+
+}else if(number1===15){
+
+alert("Excelente");
+
+}else{
+
+alert("Error");
+
+}
+
+<h2>Ejercicio 8</h2>
+//*Write an algorithm to find the largest among 5 different numbers entered by the user. Print out the largest number to the console.*//
+let number1 = parseInt(prompt("Ingrese primer numero"));
+let number2 = parseInt(prompt("Ingrese segundo numero"));
+let number3 = parseInt(prompt("Ingrese tercer numero"));
+let number4 = parseInt(prompt("Ingrese cuarto numero"));
+let number5 = parseInt(prompt("Ingrese quinto numero"));
+
+
+if(number1>number2 && number1>number3 && number1>number4 && number1>number5){
+alert("El Primer numero ingresado es el mayor es " + number1);
+}else if(number2>number1 && number2>number3 && number2>number4 && number2>number5){
+alert("El Segundo numero ingresado es el mayor es " + number2);
+}else if(number3>number1 && number3>number2 && number3>number4 && number3>number5){
+alert("El Tercer numero ingresado es el mayor es " + number3);
+}else if(number4>number1 && number4>number2 && number4>number3 && number4>number5){
+alert("El Cuarto numero ingresado es el mayor es " + number4);
+}else if(number5>number1 && number5>number2 && number5>number3 && number5>number4){
+alert("El Quinto numero ingresado es el mayor es " + number5);
+}
+<h2>Ejercicio 9</h2>
+//*We have 3 items and we know the price for each. However, we can only buy the two least expensive items. Write an algorithm that takes in three user inputs and outputs the two smallest prices to the console.*//
+
+function articulos(a,b,c){
+if(a > b && a > c){
+alert("Los artículos más baratos cuestan: " + b +"$" + " y" + c+"$");
+}else if (b > a && b > c){
+alert("Los artículos más baratos cuestan: " + a+"$" + " y" + c+"$");
+}else if (c > a && c > b){
+alert("Los artículos más baratos cuestan: " + a+"$" + " y" + b+"$");
+}
+}
+
+let numero1 = parseInt(prompt("Ingrese el primer número: "));
+let numero2 = parseInt(prompt("Ingrese el segundo número: "));
+let numero3 = parseInt(prompt("Ingrese el tercer número: "));
+
+articulos(numero1,numero2,numero3);
+
 </html>
